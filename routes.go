@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/Ahmad940/dropify/app/handler/ws"
 	"github.com/Ahmad940/dropify/pkg/middleware"
+	"github.com/Ahmad940/dropify/pkg/router"
 
 	"github.com/gofiber/contrib/websocket"
 	"github.com/gofiber/fiber/v2"
@@ -26,6 +27,7 @@ func AttachRoutes(app *fiber.App) {
 	api.Get("/", func(c *fiber.Ctx) error { return c.JSON(fiber.Map{"message": "Hello, World!"}) })
 
 	// routes
+	router.Authentication(api)
 
 	// not found
 	middleware.NotFoundMiddleware(app)

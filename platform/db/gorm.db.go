@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/Ahmad940/dropify/app/model"
 	"github.com/Ahmad940/dropify/pkg/config"
 
 	"gorm.io/driver/sqlite"
@@ -21,7 +22,7 @@ func InitializeMigration() {
 	}
 
 	// migrations here
-	err = DB.AutoMigrate()
+	err = DB.AutoMigrate(&model.User{})
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Migration has failed: %v\n", err)
 		os.Exit(1)

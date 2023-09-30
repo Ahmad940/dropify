@@ -1,9 +1,13 @@
 package util
 
 import (
+	"errors"
 	"os"
 	"strings"
 
+	"github.com/Ahmad940/dropify/app/model"
+	"github.com/Ahmad940/dropify/pkg/constant"
+	"github.com/Ahmad940/dropify/platform/db"
 	"github.com/gofiber/fiber/v2"
 	"github.com/golang-jwt/jwt/v5"
 )
@@ -28,7 +32,18 @@ func ExtractTokenMetadata(c *fiber.Ctx) (*TokenMetadata, error) {
 		expires := int64(claims["exp"].(int64))
 		id := claims["id"].(string)
 
-		// do some user validation and return this if it satisfies validation
+		// validating user
+		var user model.User
+
+		err := db.DB.First(&user, id).Error
+		if err != nil {
+			if err.Error() == constant.SqlNotFoundText {
+				return &TokenMetadata{}, errors.New("Invalid token")
+			} else {
+				return &TokenMetadata{}, err
+			}
+		}
+
 		return &TokenMetadata{
 			ID:      id,
 			Expires: expires,

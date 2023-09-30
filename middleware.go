@@ -40,7 +40,9 @@ func EnableMiddlewares(app *fiber.App) {
 		},
 	}))
 
-	// http middleware
+	// http middlewares
+
+	// // check if client browser support websocket
 	app.Use("/ws", func(c *fiber.Ctx) error {
 		// IsWebSocketUpgrade returns true if the client
 		// requested upgrade to the WebSocket protocol.

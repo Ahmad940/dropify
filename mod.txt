@@ -1,0 +1,23 @@
+module github.com/Ahmad940/dropify
+
+go 1.21
+
+require (
+	github.com/goccy/go-json v0.10.2
+	github.com/gofiber/fiber/v2 v2.49.2
+	github.com/gofiber/helmet/v2 v2.2.26
+	github.com/joho/godotenv v1.5.1
+	github.com/markbates/pkger v0.17.1
+	gorm.io/driver/sqlite v1.5.3
+	gorm.io/gorm v1.25.4
+)
+
+
+require (
+	github.com/gofiber/contrib/jwt v1.0.7 // indirect
+	github.com/golang-jwt/jwt/v5 v5.0.0 // indirect
+	github.com/google/uuid v1.3.1 // indirect
+	github.com/kr/pretty v0.3.1 // indirect
+	github.com/matoous/go-nanoid/v2 v2.0.0 // indirect
+	gopkg.in/guregu/null.v4 v4.0.0 // indirect
+)

@@ -1,0 +1,13 @@
+[Unit]
+Description=Dropify
+After=network.target
+
+[Service]
+WorkingDirectory=/root/dropify
+ExecStart=/root/dropify/dist/build
+Restart=always
+RestartSec=5s
+User=root
+
+[Install]
+WantedBy=multi-user.target

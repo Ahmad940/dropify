@@ -1,0 +1,6 @@
+# Directories
+/.idea
+/tmp
+.VSCodeCounter
+build
+dropify

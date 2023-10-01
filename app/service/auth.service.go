@@ -3,6 +3,7 @@ package service
 import (
 	"errors"
 	"fmt"
+	"strings"
 
 	"github.com/Ahmad940/dropify/app/model"
 	"github.com/Ahmad940/dropify/pkg/util"
@@ -56,6 +57,10 @@ func CreateAccount(param model.Auth) error {
 	password, err := util.HashPassword(param.Password)
 	if err != nil {
 		return err
+	}
+
+	if strings.Trim(param.Role, "") == "" {
+		param.Role = "user"
 	}
 
 	err = db.DB.Create(&model.User{

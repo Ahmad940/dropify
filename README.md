@@ -2,7 +2,7 @@
 
  Drop your product to the cloud 🔥🚀
 
-# What is Dropify?
+## What is Dropify?
 
 An open source PaaS that automates and facilitates the creation and management of cloud servers in remote servers like digital ocean droplet
 
@@ -12,7 +12,7 @@ An open source PaaS that automates and facilitates the creation and management o
 > Please pay attention to the following important points:
 > 1. Quality Matters: We value well-written and clear contributions. Spammy or vague contributions with unhelpful commit messages will not be accepted. It's important to provide meaningful contributions.
 > 
-> 2. Contribution Guidelines: Ensure your pull requests meet our contribution guidelines. Failing to meet these requirements may result in your pull request being rejected.
+> 2. Contribution Guidelines: Ensure your pull requests meet our [contribution](https://github.com/Ahmad940/dropify/blob/main/CONTRIBUTING.md) guidelines. Failing to meet these requirements may result in your pull request being rejected.
 
 ### Join Us for Hacktoberfest!
 
@@ -59,7 +59,6 @@ $ go get
 ```bash
 $ # Start
 $ go run .
-$ 
 $ # or air if you want live reload
 $ air
 ```

@@ -44,23 +44,23 @@ Before contributing or adding a new feature, please make sure you have already i
 #### Commands
 
 ```bash
-$ # Clone dependency
-$ git clone https://github.com/Ahmad940/dropify.git
-$ go get
+# Clone dependency
+git clone https://github.com/Ahmad940/dropify.git
+go get
 ```
 
 ```bash
-$ # Install dependencies
-$ go get
+# Install dependencies
+go get
 ```
 
 > Update .env to suit your need
 
 ```bash
-$ # Start
-$ go run .
-$ # or air if you want live reload
-$ air
+# Start
+go run .
+# or air if you want live reload
+air
 ```
 
 open localhost:<app_port> in the browser to view to see dropify in action
